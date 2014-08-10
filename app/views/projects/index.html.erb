@@ -1,0 +1,13 @@
+<h1>Create a new project</h1>
+
+<%= form_for Project.new do |f| %>
+  Title: <%= f.text_field :title %> <br>
+  Prompt: <%= f.text_area :prompt %> <br>
+  Solution Repo: <%= f.text_field :solution_repo %> <br>
+  <%= f.submit %>
+<% end %>
+
+<h1>View all projects</h1>
+<% @projects.each do |project| %>
+  <%= render 'shared/project', project: project %>
+<% end %>

@@ -1,0 +1,8 @@
+<h1>The Project</h1>
+<%= render 'shared/project', project: @project %>
+
+<h4>Your solution repo</h4>
+<%= @solution.repo %>
+
+<h4>Your results</h4>
+<%= @solution.result || "No results yet. Check again soon" %>

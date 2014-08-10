@@ -1,0 +1,10 @@
+  <div>
+    <h3>Title: <%= project.title %></h3>
+    <p>Prompt: <%= project.prompt %></p>
+    <p>Submit your solution</p>
+    <%= form_for [project, project.solutions.new] do |f| %>
+    <%= f.text_field :repo %>
+    <%= f.submit %>
+    <% end %>
+  </div>
+  <br>
